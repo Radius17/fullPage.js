@@ -1000,7 +1000,7 @@
 		$(document).on({
 			mouseenter: function(){
 				var tooltip = $(this).data('tooltip');
-				$('<div class="fp-tooltip ' + options.navigationPosition +'">' + tooltip + '</div>').hide().appendTo($(this)).fadeIn(200);
+				if(tooltip!='') $('<div class="fp-tooltip ' + options.navigationPosition +'">' + tooltip + '</div>').hide().appendTo($(this)).fadeIn(200);
 			},
 			mouseleave: function(){
 				$(this).find('.fp-tooltip').fadeOut(200, function() {
